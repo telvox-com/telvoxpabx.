@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telvox PABX Solutions | Layanan PABX Terbaik di Indonesia</title>
+    <meta name="description" content="Penyedia jasa instalasi, maintenance, perbaikan PABX seluruh Indonesia. Teknisi berpengalaman, harga kompetitif, garansi resmi.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary: #0056b3;
+            --primary-dark: #003d7a;
+            --secondary: #ff6b00;
+            --accent: #00a8e8;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #333;
+            --text-light: #6c757d;
+            --gray: #e9ecef;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text);
+            line-height: 1.7;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+        
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text);
+        }
+        
+        a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 86, 179, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e05d00;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 0, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 5px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 12px;
+        }
+        
+        .logo-text h1 {
+            color: var(--primary);
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 0;
+        }
+        
+        .logo-text span {
+            color: var(--text-light);
+            font-size: 14px;
+            display: block;
+            font-weight: 400;
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 16px;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after,
+        nav ul li a.active::after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 200px 0 120px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: rgba(255, 255, 255, 0.9);
+            animation: fadeInUp 1s ease;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 32px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .service-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 50px;
+        }
+        
+        .service-tab {
+            padding: 12px 25px;
+            background-color: var(--gray);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .service-tab:hover,
+        .service-tab.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .service-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .service-content.active {
+            display: block;
+        }
+        
+        .service-detail {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        
+        .service-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 400px;
+        }
+        
+        .service-info {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .service-info h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .service-info ul {
+            margin: 20px 0;
+            list-style: none;
+        }
+        
+        .service-info ul li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .service-info ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--success);
+        }
+        
+        .service-img {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-detail:hover .service-img img {
+            transform: scale(1.05);
+        }
+        
+        .service-area {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .area-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .area-card:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .area-card h4 {
+            margin-bottom: 0;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon-sm {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 86, 179, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--primary);
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 86, 179, 0.9)), url('https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+        
+        .testimonials .section-header h2 {
+            color: white;
+        }
+        
+        .testimonials .section-header p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .testimonial-slider {
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .testimonial-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 0 15px;
+            position: relative;
+        }
+        
+        .testimonial-item::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .author-info span {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 1.75rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .contact-text a {
+            color: var(--text);
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary);
+        }
+        
+        .contact-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .contact-social a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-social a:hover {
+            background-color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-form h3 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-size: 1.75rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h4 {
+            font-size: 1.25rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact li {
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            list-style: none;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+        
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .blog-card:hover .blog-img img {
+            transform: scale(1.1);
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-content h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .blog-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .service-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-info {
+                order: 1;
+            }
+            
+            .service-img {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img {
+                order: -1;
+            }
+            
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            
+            .hero {
+                padding: 180px 0 100px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+                transform: translateY(-150%);
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .service-info,
+            .contact-info,
+            .contact-form {
+                padding: 25px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/50x50" alt="Telvox PABX Logo">
+                <div class="logo-text">
+                    <h1>Telvox PABX</h1>
+                    <span>Solusi Komunikasi Bisnis Profesional</span>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="https://wa.me/628129978603" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Solusi PABX Terbaik untuk Bisnis Anda</h1>
+            <p class="animate__animated animate__fadeInUp">Kami menyediakan layanan instalasi, maintenance, dan perbaikan sistem PABX dengan kualitas terbaik dan harga kompetitif untuk mendukung komunikasi bisnis yang efisien di seluruh wilayah Indonesia.</p>
+            <div class="cta-buttons animate__animated animate__fadeIn">
+                <a href="#services" class="btn btn-primary"><i class="fas fa-search"></i> Pelajari Layanan</a>
+                <a href="tel:+628129978603" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa Memilih Kami?</h2>
+                <p>Kami memberikan solusi terbaik untuk kebutuhan sistem telepon bisnis Anda dengan layanan profesional dan berkualitas.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Berpengalaman</h3>
+                    <p>Lebih dari 10 tahun melayani instalasi dan perbaikan PABX untuk berbagai jenis bisnis di seluruh Indonesia.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Respon Cepat</h3>
+                    <p>Tim teknisi siap datang ke lokasi Anda dalam waktu 24 jam untuk wilayah Jakarta, Bogor, Depok, Tangerang, Bekasi.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garansi</h3>
+                    <p>Kami memberikan garansi untuk semua pekerjaan instalasi dan perbaikan yang kami lakukan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Layanan Kami</h2>
+                <p>Berbagai layanan profesional untuk memenuhi semua kebutuhan sistem PABX bisnis Anda.</p>
+            </div>
+            
+            <div class="service-tabs">
+                <div class="service-tab active" data-tab="installation">Instalasi PABX</div>
+                <div class="service-tab" data-tab="maintenance">Maintenance</div>
+                <div class="service-tab" data-tab="repair">Perbaikan PABX</div>
+                <div class="service-tab" data-tab="upgrade">Upgrade Sistem</div>
+                <div class="service-tab" data-tab="consultation">Konsultasi</div>
+            </div>
+            
+            <!-- Installation Service -->
+            <div class="service-content active" id="installation">
+                <div class="service-detail">
+                    <div class="service-row">
+                        <div class="service-info">
+                            <h3>Instalasi Sistem PABX Baru</h3>
+                            <p>Kami menyediakan jasa instalasi sistem PABX baru untuk bisnis Anda dengan berbagai pilihan merek ternama seperti Panasonic, Siemens, Avaya, dan lainnya.</p>
+                            <ul>
+                                <li>Pemasangan sistem PABX baru lengkap</li>
+                                <li>Konfigurasi sesuai kebutuhan bisnis</li>
+                                <li>Pemilihan perangkat berkualitas</li>
+                                <li>Pengaturan fitur tambahan (voicemail, call recording, dll)</li>
+                                <li>Pelatihan penggunaan untuk staff</li>
+                            </ul>
+                            <a href="https://wa.me/628129978603" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Konsultasi Gratis</a>
+                        </div>
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Instalasi PABX">
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin: 50px 0 30px;">Layanan Instalasi PABX di Berbagai Lokasi</h3>
+                
+                <div class="area-grid">
+                    <a href="#pabx-jakarta" class="area-card">
+                        <h4>PABX Jakarta</h4>
+                    </a>
+                    <a href="#pabx-bogor" class="area-card">
+                        <h4>PABX Bogor</h4>
+                    </a>
+                    <a href="#pabx-depok" class="area-card">
+                        <h4>PABX Depok</h4>
+                    </a>
+                    <a href="#pabx-tangerang" class="area-card">
+                        <h4>PABX Tangerang</h4>
+                    </a>
+                    <a href="#pabx-bekasi" class="area-card">
+                        <h4>PABX Bekasi</h4>
+                    </a>
+                    <a href="#pabx-cikarang" class="area-card">
+                        <h4>PABX Cikarang</h4>
+                    </a>
+                    <a href="#pabx-cakung" class="area-card">
+                        <h4>PABX Cakung</h4>
+                    </a>
+                    <a href="#pabx-karawang" class="area-card">
+                        <h4>PABX Karawang</h4>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Maintenance Service -->
+            <div class="service-content" id="maintenance">
+                <div class="service-detail">
+                    <div class="service-row">
+                        <div class="service-info">
+                            <h3>Maintenance & Perawatan PABX</h3>
+                            <p>Layanan perawatan berkala untuk menjaga sistem PABX Anda selalu dalam kondisi prima dan menghindari kerusakan yang tidak diinginkan.</p>
+                            <ul>
+                                <li>Pembersihan perangkat secara berkala</li>
+                                <li>Update software sistem</li>
+                                <li>Pengecekan kualitas jaringan</li>
+                                <li>Backup konfigurasi sistem</li>
+                                <li>Laporan kondisi perangkat</li>
+                            </ul>
+                            <a href="https://wa.me/628129978603" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Pesan Sekarang</a>
+                        </div>
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Maintenance PABX">
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin: 50px 0 30px;">Paket Maintenance PABX</h3>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Paket Bulanan</h3>
+                        <p>Perawatan rutin setiap bulan termasuk pengecekan sistem, pembersihan perangkat, dan update software.</p>
+                        <a href="tel:+628129978603" class="btn btn-outline">Info Lengkap</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Paket Triwulan</h3>
+                        <p>Perawatan setiap 3 bulan sekali dengan pemeriksaan lebih menyeluruh termasuk testing semua saluran.</p>
+                        <a href="tel:+628129978603" class="btn btn-outline">Info Lengkap</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-star"></i>
+                        </div>
+                        <h3>Paket Tahunan</h3>
+                        <p>Perawatan komprehensif 1 tahun termasuk garansi sparepart dengan harga lebih ekonomis.</p>
+                        <a href="tel:+628129978603" class="btn btn-outline">Info Lengkap</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Repair Service -->
+            <div class="service-content" id="repair">
+                <div class="service-detail">
+                    <div class="service-row">
+                        <div class="service-info">
+                            <h3>Perbaikan Sistem PABX</h3>
+                            <p>Tim teknisi kami siap membantu memperbaiki berbagai masalah pada sistem PABX Anda dengan cepat dan profesional.</p>
+                            <ul>
+                                <li>Perbaikan hardware PABX</li>
+                                <li>Troubleshooting software</li>
+                                <li>Perbaikan saluran telepon</li>
+                                <li>Ganti sparepart yang rusak</li>
+                                <li>Recovery data dan konfigurasi</li>
+                            </ul>
+                            <a href="tel:+628129978603" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Teknisi</a>
+                        </div>
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a7f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Perbaikan PABX">
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin: 50px 0 30px;">Masalah yang Sering Terjadi</h3>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-phone-slash"></i>
+                        </div>
+                        <h3>Saluran Mati</h3>
+                        <p>Beberapa atau semua saluran telepon tidak berfungsi.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-volume-mute"></i>
+                        </div>
+                        <h3>Suara Tidak Jelas</h3>
+                        <p>Suara penerima telepon terputus-putus atau bergema.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Sistem Error</h3>
+                        <p>Muncul pesan error pada display PABX atau telepon.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upgrade Service -->
+            <div class="service-content" id="upgrade">
+                <div class="service-detail">
+                    <div class="service-row">
+                        <div class="service-info">
+                            <h3>Upgrade Sistem PABX</h3>
+                            <p>Tingkatkan sistem PABX lama Anda ke teknologi terbaru dengan fitur lebih lengkap dan performa lebih baik.</p>
+                            <ul>
+                                <li>Migrasi ke sistem PABX digital/IP</li>
+                                <li>Penambahan saluran telepon</li>
+                                <li>Upgrade software ke versi terbaru</li>
+                                <li>Integrasi dengan VoIP</li>
+                                <li>Penambahan fitur canggih</li>
+                            </ul>
+                            <a href="https://wa.me/628129978603" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Konsultasi Upgrade</a>
+                        </div>
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Upgrade PABX">
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin: 50px 0 30px;">Keuntungan Upgrade PABX</h3>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Fitur Lebih Lengkap</h3>
+                        <p>Dapatkan fitur canggih seperti call recording, voicemail, auto attendant, dan lainnya.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Efisiensi Biaya</h3>
+                        <p>Teknologi baru membantu mengurangi biaya operasional telepon bisnis Anda.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Keamanan Lebih Baik</h3>
+                        <p>Sistem terbaru memiliki proteksi lebih baik terhadap penyadapan dan gangguan.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Consultation Service -->
+            <div class="service-content" id="consultation">
+                <div class="service-detail">
+                    <div class="service-row">
+                        <div class="service-info">
+                            <h3>Konsultasi Sistem PABX</h3>
+                            <p>Butuh saran untuk sistem telepon bisnis Anda? Tim ahli kami siap membantu memberikan solusi terbaik.</p>
+                            <ul>
+                                <li>Analisis kebutuhan sistem telepon</li>
+                                <li>Rekomendasi sistem PABX terbaik</li>
+                                <li>Perhitungan biaya investasi</li>
+                                <li>Perencanaan migrasi sistem</li>
+                                <li>Solusi masalah spesifik</li>
+                            </ul>
+                            <a href="tel:+622187984144" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Hubungi Kami</a>
+                        </div>
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Konsultasi PABX">
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin: 50px 0 30px;">Topik Konsultasi</h3>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <h3>PABX vs VoIP</h3>
+                        <p>Mana yang lebih cocok untuk bisnis Anda? Kami bantu analisis kebutuhan Anda.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Penghematan Biaya</h3>
+                        <p>Cara mengoptimalkan sistem telepon untuk mengurangi biaya operasional.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h3>Ekspansi Sistem</h3>
+                        <p>Strategi mengembangkan sistem telepon seiring pertumbuhan bisnis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Area Service Details -->
+    <section class="service-area" id="pabx-jakarta">
+        <div class="container">
+            <div class="section-header">
+                <h2>Layanan PABX Jakarta</h2>
+                <p>Kami menyediakan layanan instalasi, maintenance, dan perbaikan PABX untuk seluruh wilayah Jakarta.</p>
+            </div>
+            
+            <div class="service-detail">
+                <div class="service-row">
+                    <div class="service-info">
+                        <h3>Instalasi PABX di Jakarta</h3>
+                        <p>Melayani pemasangan sistem PABX baru untuk berbagai jenis bisnis di seluruh wilayah Jakarta, mulai dari Jakarta Pusat, Jakarta Selatan, Jakarta Barat, Jakarta Timur, hingga Jakarta Utara.</p>
+                        <ul>
+                            <li>Pemasangan PABX untuk kantor baru</li>
+                            <li>Migrasi dari sistem lama ke baru</li>
+                            <li>Penambahan ekstensi telepon</li>
+                            <li>Integrasi dengan jaringan VoIP</li>
+                            <li>Perbaikan dan troubleshooting</li>
+                        </ul>
+                        <div class="cta-buttons" style="justify-content: flex-start; margin-top: 30px;">
+                            <a href="https://wa.me/628129978603" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="tel:+628129978603" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Telepon</a>
+                        </div>
+                    </div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1551524559-8af4e6624178?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80" alt="PABX Jakarta">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="service-area" id="pabx-bogor">
+        <div class="container">
+            <div class="section-header">
+                <h2>Layanan PABX Bogor</h2>
+                <p>Solusi lengkap untuk kebutuhan sistem telepon bisnis di wilayah Bogor dan sekitarnya.</p>
+            </div>
+            
+            <div class="service-detail">
+                <div class="service-row">
+                    <div class="service-info">
+                        <h3>PABX Bogor Terbaik</h3>
+                        <p>Kami telah melayani berbagai perusahaan, hotel, rumah sakit, dan institusi di Bogor untuk kebutuhan sistem telepon bisnis mereka. Dengan teknisi lokal yang berpengalaman, kami siap membantu Anda.</p>
+                        <ul>
+                            <li>Instalasi PABX baru di Bogor</li>
+                            <li>Perbaikan PABX cepat di Bogor</li>
+                            <li>Maintenance rutin sistem telepon</li>
+                            <li>Upgrade sistem lama ke digital</li>
+                            <li>Penambahan saluran telepon</li>
+                        </ul>
+                        <div class="cta-buttons" style="justify-content: flex-start; margin-top: 30px;">
+                            <a href="https://wa.me/628129978603" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="tel:+628129978603" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Telepon</a>
+                        </div>
+                    </div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1580651214613-f4692d6d138f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="PABX Bogor">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="service-area" id="pabx-bekasi">
+        <div class="container">
+            <div class="section-header">
+                <h2>Layanan PABX Bekasi</h2>
+                <p>Solusi lengkap untuk kebutuhan sistem telepon bisnis di wilayah Bekasi dan sekitarnya.</p>
+            </div>
+            
+            <div class="service-detail">
+                <div class="service-row">
+                    <div class="service-info">
+                        <h3>PABX Bekasi Profesional</h3>
+                        <p>Kami menyediakan layanan instalasi, maintenance, dan perbaikan PABX untuk berbagai jenis bisnis di Bekasi, mulai dari perusahaan kecil hingga besar di seluruh wilayah Bekasi.</p>
+                        <ul>
+                            <li>Instalasi PABX baru di Bekasi</li>
+                            <li>Perbaikan PABX cepat di Bekasi</li>
+                            <li>Maintenance berkala sistem telepon</li>
+                            <li>Upgrade sistem analog ke digital</li>
+                            <li>Penambahan saluran telepon</li>
+                        </ul>
+                        <div class="cta-buttons" style="justify-content: flex-start; margin-top: 30px;">
+                            <a href="https://wa.me/628129978603" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="tel:+628129978603" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Telepon</a>
+                        </div>
+                    </div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1623341214821-7e54d8e2b07d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="PABX Bekasi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Artikel Terbaru</h2>
+                <p>Informasi dan tips terbaru seputar sistem PABX dan telekomunikasi bisnis.</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="PABX Modern">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Keuntungan Menggunakan PABX Digital untuk Bisnis</h3>
+                        <p>Pelajari bagaimana sistem PABX digital dapat meningkatkan efisiensi komunikasi bisnis Anda dan menghemat biaya operasional.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 15 Juni 2023</span>
+                            <span><i class="far fa-eye"></i> 1.2K</span>
+                        </div>
+                        <a href="#blog-detail" class="btn btn-outline" style="margin-top: 15px;">Baca Selengkapnya</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Maintenance PABX">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Panduan Maintenance PABX untuk Pemula</h3>
+                        <p>Tips dan trik merawat sistem PABX Anda agar tetap berfungsi optimal dan tahan lama.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 5 Juni 2023</span>
+                            <span><i class="far fa-eye"></i> 890</span>
+                        </div>
+                        <a href="#blog-detail" class="btn btn-outline" style="margin-top: 15px;">Baca Selengkapnya</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Upgrade PABX">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Kapan Waktu yang Tepat untuk Upgrade PABX?</h3>
+                        <p>Tanda-tanda sistem PABX Anda sudah perlu diupgrade dan solusi terbaik untuk migrasi ke sistem baru.</p>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 25 Mei 2023</span>
+                            <span><i class="far fa-eye"></i> 1.5K</span>
+                        </div>
+                        <a href="#blog-detail" class="btn btn-outline" style="margin-top: 15px;">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#blog-archive" class="btn btn-primary">Lihat Semua Artikel</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang Telvox PABX Solutions</h2>
+                    <p>Telvox PABX Solutions adalah perusahaan penyedia jasa instalasi, maintenance, dan perbaikan sistem PABX yang telah berpengalaman lebih dari 10 tahun melayani berbagai bisnis di seluruh Indonesia.</p>
+                    <p>Kami berkomitmen untuk memberikan solusi komunikasi bisnis yang efisien dengan teknologi terkini dan dukungan teknis yang responsif. Tim teknisi kami yang berpengalaman siap membantu Anda dalam memilih, menginstalasi, dan merawat sistem PABX yang sesuai dengan kebutuhan bisnis Anda.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon-sm">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4>Tim Profesional</h4>
+                                <p>Teknisi bersertifikat dengan pengalaman luas di bidang telekomunikasi bisnis.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-sm">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4>Kualitas Terjamin</h4>
+                                <p>Hanya menggunakan perangkat berkualitas dari merek ternama dengan garansi resmi.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-sm">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div>
+                                <h4>Jangkauan Luas</h4>
+                                <p>Melayani seluruh wilayah Jabodetabek dan kota-kota besar di Indonesia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Tim Telvox PABX">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Apa Kata Klien Kami</h2>
+                <p>Berikut beberapa testimoni dari klien yang telah menggunakan layanan kami.</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        <p>"Sangat puas dengan pelayanan Telvox PABX. Teknisi datang tepat waktu dan menyelesaikan masalah PABX kami dengan cepat. Harga juga sangat kompetitif dibandingkan dengan penyedia lain yang kami hubungi."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Budi Santoso">
+                        </div>
+                        <div class="author-info">
+                            <h4>Budi Santoso</h4>
+                            <span>Direktur, PT Maju Jaya Abadi</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        <p>"Proses instalasi PABX di kantor kami berjalan lancar dan cepat. Tim Telvox sangat profesional dalam menangani migrasi dari sistem lama ke sistem baru. Tidak ada downtime yang berarti selama proses instalasi."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dewi Kartika">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dewi Kartika</h4>
+                            <span>Manajer IT, RS Sehat Sentosa</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        <p>"Paket maintenance tahunan yang kami ambil sangat membantu. Sistem PABX kami selalu dalam kondisi prima dan jarang mengalami masalah. Respons tim support juga sangat cepat ketika kami membutuhkan bantuan."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Hendra Wijaya">
+                        </div>
+                        <div class="author-info">
+                            <h4>Hendra Wijaya</h4>
+                            <span>Pemilik, Hotel Grand Permata</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hubungi Kami</h2>
+                <p>Silakan hubungi kami untuk konsultasi gratis atau penawaran khusus.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Alamat Kantor</h4>
+                                <p>JL. Raya Bojonggede No. 56<br>Depok-Bogor 16320</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telepon</h4>
+                                <a href="tel:+622187984144">(021) 8798 4144</a><br>
+                                <a href="tel:+628129978603">+62 812 9978 603</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:telvoxpabx@gmail.com">telvoxpabx@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px;">Media Sosial</h3>
+                    <div class="contact-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Alamat Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Nomor Telepon" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="">Pilih Layanan</option>
+                                <option value="installation">Instalasi PABX</option>
+                                <option value="maintenance">Maintenance PABX</option>
+                                <option value="repair">Perbaikan PABX</option>
+                                <option value="upgrade">Upgrade PABX</option>
+                                <option value="consultation">Konsultasi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Pesan Anda" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Tentang Kami</h4>
+                    <div class="footer-about">
+                        <p>Telvox PABX Solutions adalah perusahaan penyedia jasa instalasi, maintenance, dan perbaikan sistem PABX yang telah berpengalaman lebih dari 10 tahun melayani berbagai bisnis di seluruh Indonesia.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Layanan Kami</h4>
+                    <ul class="footer-links">
+                        <li><a href="#installation">Instalasi PABX</a></li>
+                        <li><a href="#maintenance">Maintenance PABX</a></li>
+                        <li><a href="#repair">Perbaikan PABX</a></li>
+                        <li><a href="#upgrade">Upgrade PABX</a></li>
+                        <li><a href="#consultation">Konsultasi PABX</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Area Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="#pabx-jakarta">PABX Jakarta</a></li>
+                        <li><a href="#pabx-bogor">PABX Bogor</a></li>
+                        <li><a href="#pabx-depok">PABX Depok</a></li>
+                        <li><a href="#pabx-tangerang">PABX Tangerang</a></li>
+                        <li><a href="#pabx-bekasi">PABX Bekasi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> JL. Raya Bojonggede No. 56, Depok-Bogor</li>
+                        <li><i class="fas fa-phone-alt"></i> (021) 8798 4144</li>
+                        <li><i class="fas fa-mobile-alt"></i> +62 812 9978 603</li>
+                        <li><i class="fas fa-envelope"></i> telvoxpabx@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Telvox PABX Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/628129978603" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if(this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Service Tabs
+        const serviceTabs = document.querySelectorAll('.service-tab');
+        
+        serviceTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                serviceTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all service contents
+                document.querySelectorAll('.service-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show the corresponding service content
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            const backToTop = document.getElementById('backToTop');
+            
+            if(window.scrollY > 100) {
+                header.classList.add('scrolled');
+                backToTop.classList.add('active');
+            } else {
+                header.classList.remove('scrolled');
+                backToTop.classList.remove('active');
+            }
+        });
+        
+        // Testimonial Slider (Simple Version)
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.style.display = i === index ? 'block' : 'none';
+            });
+        }
+        
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+        
+        // Initialize
+        showTestimonial(0);
+        setInterval(nextTestimonial, 5000);
+        
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        if(contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Terima kasih atas pesan Anda. Kami akan segera menghubungi Anda kembali.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
